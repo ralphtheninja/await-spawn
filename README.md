@@ -1,5 +1,7 @@
 # await-spawn
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/await-spawn.svg)](https://greenkeeper.io/)
+
 `child_process.spawn()` wrapped in a `Promise` for doing async/await.
 
 ```
