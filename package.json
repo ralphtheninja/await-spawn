@@ -1,0 +1,24 @@
+{
+  "name": "await-spawn",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^3.0.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "homepage": "https://github.com/ralphtheninja/await-spawn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ralphtheninja/await-spawn.git"
+  },
+  "scripts": {
+    "test": "tape test && standard"
+  },
+  "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
+  "keywords": [],
+  "license": "MIT"
+}
