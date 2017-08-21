@@ -25,3 +25,25 @@ test('running existent works fine', async t => {
   await promise
   t.end()
 })
+
+test('resolves to buffered stdout output', async t => {
+  const files = [
+    'index.js',
+    'node_modules',
+    'package.json',
+    'README.md',
+    'test'
+  ]
+  t.plan(files.length)
+  const output = await spawn('ls')
+  const lines = output.split('\n')
+  files.forEach(file => {
+    t.ok(lines.includes(file), `found ${file}`)
+  })
+})
+
+test('options.stdio === "inherit" resolves to empty string', async t => {
+  const output = await spawn('ls', { stdio: 'inherit' })
+  t.deepEqual(output, '', 'empty string')
+  t.end()
+})

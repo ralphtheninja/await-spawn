@@ -13,13 +13,17 @@ $ npm i await-spawn -S
 ```js
 const spawn = require('await-spawn')
 (async () => {
-  await spawn('ls', [ '-al' ], { stdio: 'inherit' })
+  console.log(await spawn('ls'))
 })()
 ```
 
 ## Api
 
-Exposes a single function, which has the same api as `child_process.spawn()`. Additionally returns a `Promise` with `.child` set to the spawned child process.
+Exposes a single function, which has the same api as `child_process.spawn()`.
+
+Returns a `Promise` with `.child` set to the spawned child process. The `Promise` resolves to the buffered output of `child.stdout`.
+
+Note that `child.stdout` doesn't exist if `options.stdio === 'inherit'`, so the `Promise` resolves to `''`.
 
 ## License
 

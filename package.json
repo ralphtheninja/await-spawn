@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "debug": "^3.0.0"
+    "bl": "^1.2.1"
   },
   "devDependencies": {
     "standard": "^10.0.3",
