@@ -1,12 +1,16 @@
 # await-spawn
 
-`child_process.spawn()` wrapped in a `Promise` for doing async/await.
+> `child_process.spawn()` wrapped in a `Promise` for doing async/await.
+
+[![Build Status](https://travis-ci.org/ralphtheninja/await-spawn.svg?branch=master)](https://travis-ci.org/ralphtheninja/await-spawn)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/await-spawn.svg)](https://greenkeeper.io/)
+
+## Install
 
 ```
 $ npm i await-spawn -S
 ```
-
-[![Build Status](https://travis-ci.org/ralphtheninja/await-spawn.svg?branch=master)](https://travis-ci.org/ralphtheninja/await-spawn) [![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/await-spawn.svg)](https://greenkeeper.io/)
 
 ## Usage
 
