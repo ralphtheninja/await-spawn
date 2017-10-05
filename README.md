@@ -16,9 +16,13 @@ $ npm i await-spawn -S
 
 ```js
 const spawn = require('await-spawn')
-(async () => {
-  console.log(await spawn('ls'))
-})()
+
+const main = async () => {
+  const buf = await spawn('ls', [ '-al' ])
+  console.log(buf.toString())
+}
+
+main()
 ```
 
 ## Api
