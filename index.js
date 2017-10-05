@@ -16,7 +16,7 @@ module.exports = (...args) => {
 
     child.on('exit', code => {
       if (code === 0) {
-        resolve(bl.toString())
+        resolve(bl)
       } else {
         reject(new Error(`child exited with code ${code}`))
       }

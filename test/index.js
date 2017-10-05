@@ -36,7 +36,7 @@ test('resolves to buffered stdout output', async t => {
   ]
   t.plan(files.length)
   const output = await spawn('ls')
-  const lines = output.split('\n')
+  const lines = output.toString().split('\n')
   files.forEach(file => {
     t.ok(lines.includes(file), `found ${file}`)
   })
