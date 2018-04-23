@@ -2,9 +2,9 @@
 
 > `child_process.spawn()` wrapped in a `Promise` for doing async/await.
 
+[![npm](https://img.shields.io/npm/v/await-spawn.svg)](https://www.npmjs.com/package/await-spawn)
 [![Build Status](https://travis-ci.org/ralphtheninja/await-spawn.svg?branch=master)](https://travis-ci.org/ralphtheninja/await-spawn)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/await-spawn.svg)](https://greenkeeper.io/)
 
 ## Install
 
