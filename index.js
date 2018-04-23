@@ -25,7 +25,9 @@ module.exports = (...args) => {
       if (code === 0) {
         resolve(stdout)
       } else {
-        reject(new Error(`child exited with code ${code}\n${stderr.toString()}`))
+        const err = new Error(`child exited with code ${code}\n${stderr.toString()}`)
+        err.stderr = stderr
+        reject(err)
       }
     })
   })

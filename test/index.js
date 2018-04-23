@@ -15,6 +15,7 @@ test('failed command throws error with code', async t => {
     await spawn('false')
   } catch (err) {
     t.equal(err.message, 'child exited with code 1\n')
+    t.ok(err.stderr, '.stderr is set')
     t.end()
   }
 })
