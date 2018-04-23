@@ -29,10 +29,17 @@ main()
 
 Exposes a single function, which has the same api as `child_process.spawn()`.
 
-Returns a `Promise` with `.child` set to the spawned child process. The `Promise` resolves to the buffered output of `child.stdout`.
+Returns a `Promise` with `.child` set to the spawned child process. The `Promise` resolves to the buffered output of `child.stdout` in the form of a [`BufferList`] object.
+
+If there was an error, the `Promise` rejects with an `Error` object, which has the following extra properties:
+
+* `code` the error code
+* `stderr` the buffered output of `stderr` in the form of a [`BufferList`] object
 
 Note that `child.stdout` doesn't exist if `options.stdio === 'inherit'`, so the `Promise` resolves to `''`.
 
 ## License
 
 MIT
+
+[`BufferList`]: https://github.com/rvagg/bl
