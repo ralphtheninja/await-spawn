@@ -18,8 +18,8 @@ $ npm i await-spawn -S
 const spawn = require('await-spawn')
 
 const main = async () => {
-  const buf = await spawn('ls', [ '-al' ])
-  console.log(buf.toString())
+  const bl = await spawn('ls', [ '-al' ])
+  console.log(bl.toString())
 }
 
 main()
