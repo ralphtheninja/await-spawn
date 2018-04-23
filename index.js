@@ -3,11 +3,18 @@ const BufferList = require('bl')
 
 module.exports = (...args) => {
   const child = spawn(...args)
-  const bl = child.stdout ? new BufferList() : ''
+  const stdout = child.stdout ? new BufferList() : ''
+  const stderr = child.stderr ? new BufferList() : ''
 
   if (child.stdout) {
     child.stdout.on('data', data => {
-      bl.append(data)
+      stdout.append(data)
+    })
+  }
+
+  if (child.stderr) {
+    child.stderr.on('data', data => {
+      stderr.append(data)
     })
   }
 
@@ -16,9 +23,9 @@ module.exports = (...args) => {
 
     child.on('exit', code => {
       if (code === 0) {
-        resolve(bl)
+        resolve(stdout)
       } else {
-        reject(new Error(`child exited with code ${code}`))
+        reject(new Error(`child exited with code ${code}\n${stderr.toString()}`))
       }
     })
   })
