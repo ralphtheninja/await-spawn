@@ -19,7 +19,11 @@
     "test": "tape test && standard"
   },
   "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
-  "keywords": [],
+  "keywords": [
+    "await",
+    "spawn",
+    "promise"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=8"
