@@ -7,7 +7,7 @@
     "bl": "^3.0.0"
   },
   "devDependencies": {
-    "standard": "^13.0.1",
+    "standard": "^14.0.2",
     "tape": "^4.8.0"
   },
   "homepage": "https://github.com/ralphtheninja/await-spawn",
