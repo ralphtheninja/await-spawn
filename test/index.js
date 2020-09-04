@@ -16,6 +16,7 @@ test('failed command throws error with code', async t => {
   } catch (err) {
     t.equal(err.message, 'child exited with code 1')
     t.ok(err.stderr, '.stderr is set')
+    t.ok(err.stdout, '.stdout is set')
     t.is(err.stderr.length, 0, 'BufferList has 0 length in this case')
     t.end()
   }
