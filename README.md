@@ -19,11 +19,11 @@ $ npm i await-spawn -S
 const spawn = require('await-spawn')
 
 const main = async () => {
-    try {
-        const bl = await spawn('ls', [ '-al' ])
-    } catch (e) {
-        console.log(e.stderr.toString());
-    }
+  try {
+    const bl = await spawn('ls', [ '-al' ])
+  } catch (e) {
+    console.log(e.stderr.toString());
+  }
   console.log(bl.toString())
 }
 
