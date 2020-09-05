@@ -20,11 +20,11 @@ const spawn = require('await-spawn')
 
 const main = async () => {
   try {
-    const bl = await spawn('ls', [ '-al' ])
+    const bl = await spawn('ls', ['-al'])
+    console.log(bl.toString())
   } catch (e) {
-    console.log(e.stderr.toString());
+    console.log(e.stderr.toString())
   }
-  console.log(bl.toString())
 }
 
 main()

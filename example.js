@@ -1,8 +1,12 @@
 const spawn = require('.')
 
 const main = async () => {
-  const buf = await spawn('ls', ['-al'])
-  console.log(buf.toString())
+  try {
+    const bl = await spawn('ls', ['-al'])
+    console.log(bl.toString())
+  } catch (e) {
+    console.log(e.stderr.toString())
+  }
 }
 
 main()
