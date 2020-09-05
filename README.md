@@ -39,6 +39,7 @@ Returns a `Promise` with `.child` set to the spawned child process. The `Promise
 If there was an error, the `Promise` rejects with an `Error` object, which has the following extra properties:
 
 * `code` the error code
+* `stdout` the buffered output of `stdout` in the form of a [`BufferList`] object
 * `stderr` the buffered output of `stderr` in the form of a [`BufferList`] object
 
 Note that `child.stdout` doesn't exist if `options.stdio === 'inherit'`, so the `Promise` resolves to `''`.
