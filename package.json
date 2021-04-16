@@ -1,6 +1,6 @@
 {
   "name": "await-spawn",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
